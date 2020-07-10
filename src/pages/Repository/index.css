@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap");
+
 .repositoryRoot {
   width: 100%;
 }
@@ -106,6 +108,10 @@
 }
 
 /* PREFACE REPOSITORY */
+.prefaceRoot {
+  width: 100%;
+  position: relative;
+}
 
 .navigation {
   display: flex;
@@ -127,4 +133,18 @@
 
 .navigation a ~ a {
   font-weight: bold;
+}
+
+.prefaceDescription {
+  padding: 15px;
+  font-weight: 400;
+  margin-left: 18px;
+  color: #586069 !important;
+  font-family: "Inter", sans-serif;
+}
+
+.stars {
+  top: 0;
+  right: 0;
+  position: absolute;
 }
