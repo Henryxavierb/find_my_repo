@@ -45,11 +45,15 @@ const ListRepositories: React.FC<RepositoryModel> = (props) => {
       </div>
 
       <div style={{ marginTop: "50px" }}>
-        <h1 className="title">Resultados da pesquisa "{state.search}"</h1>
-
         {noRepositoryFound ? (
-          <h2 className="noRepositoryFound">Nenhum repositório encontrado!</h2>
+          <h2 className="noRepositoryFound">
+            We couldn’t find any code matching: {state.search}
+          </h2>
         ) : (
+          <h1 className="title">Search results for: "{state.search}"</h1>
+        )}
+
+        {!noRepositoryFound && (
           <div className="listContainer">
             {state.options?.map((tuple: OptionsModel) => {
               return (
