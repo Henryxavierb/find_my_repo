@@ -31,7 +31,9 @@ const Repository: React.FC<Repository> = (props) => {
           {name}
         </div>
 
-        {description && <div className="description">{description}</div>}
+        <div className="description">
+          {description || "No description, website, or topics provided."}
+        </div>
 
         <div className="foot">
           {language && (

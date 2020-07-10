@@ -40,24 +40,26 @@ const Repository: React.FC<PrefaceModel> = (props) => {
 
   return (
     <div className="ownerSection">
-      <img
-        src={avatar}
-        draggable="false"
-        alt="owner avatar"
-        className="avatar"
-      />
+      <div className="aboutUser">
+        <img
+          src={avatar}
+          draggable="false"
+          alt="owner avatar"
+          className="avatar"
+        />
 
-      <div className="ownerPreface">
-        <div className="userName">{name}</div>
+        <div>
+          <div className="userName">{name}</div>
 
-        <div>{username}</div>
-
-        <div className="userBio">{bio}</div>
-
-        <a href={userUrl} className="moreDetailsAboutUser">
-          More
-        </a>
+          <div>{username}</div>
+        </div>
       </div>
+
+      <div className="userBio">{bio}</div>
+
+      <a href={userUrl} className="moreDetailsAboutUser">
+        More
+      </a>
 
       <div className="follow">
         <img src={accountDetail} alt="details" />
