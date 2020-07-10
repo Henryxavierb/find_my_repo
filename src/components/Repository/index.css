@@ -66,6 +66,10 @@
   color: #586069 !important;
 }
 
+img {
+  cursor: text;
+}
+
 @media (max-width: 800px) {
   .repoContainer {
     width: 95%;

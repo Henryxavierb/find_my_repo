@@ -38,7 +38,7 @@ const Repository: React.FC<Repository> = (props) => {
           <div className="stars">
             <span className="starCount">{starsCount}</span>
 
-            <img src={starImage} alt="Star" />
+            <img src={starImage} alt="Star" draggable="false" />
           </div>
         </div>
       </div>
