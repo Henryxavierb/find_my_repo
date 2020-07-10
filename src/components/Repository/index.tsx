@@ -2,25 +2,34 @@ import React from "react";
 
 import "./index.css";
 import colors from "./colors.json";
+import { useHistory } from "react-router-dom";
 import starImage from "../../assets/star.svg";
 
 interface Repository {
   // name?: string (optional)
   name: string;
-  language: string;
+  owner: string;
+  language?: string;
   starsCount: string;
-  description: string;
+  description?: string;
 }
 
 const Repository: React.FC<Repository> = (props) => {
-  const { name, language, description, starsCount } = props;
+  const { name, owner, language, description, starsCount } = props;
 
+  const history = useHistory();
   const languageColor: { [index: string]: any } = colors;
+
+  function goToRepository() {
+    history.push("/repository", props);
+  }
 
   return (
     <div className="repoContainer">
       <div className="about">
-        <div className="name">{name}</div>
+        <div className="name" onClick={goToRepository}>
+          {name}
+        </div>
 
         {description && <div className="description">{description}</div>}
 
