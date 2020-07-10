@@ -1,0 +1,16 @@
+.container {
+  top: 0;
+  width: 100%;
+  height: 53px;
+  display: flex;
+  padding: 0 16px;
+  cursor: pointer;
+  position: absolute;
+  justify-content: center;
+  background-color: #24292e;
+}
+
+img {
+  margin-top: 5px;
+  border-radius: 100%;
+}
