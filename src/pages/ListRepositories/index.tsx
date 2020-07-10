@@ -1,9 +1,9 @@
 import React from "react";
 
 import "./index.css";
-import { useHistory } from "react-router-dom";
-import Header from "../../components/HeaderBar";
+import Header from "../../components/Header";
 import Repository from "../../components/Repository";
+import { useHistory, Redirect } from "react-router-dom";
 
 interface RepositoryModel {
   location?: any;
@@ -14,6 +14,7 @@ interface OptionsModel {
   language: string;
   html_url: string;
   description: string;
+  owner: { login: string };
   stargazers_count: string;
 }
 
@@ -23,7 +24,7 @@ const ListRepositories: React.FC<RepositoryModel> = (props) => {
   const history = useHistory();
 
   if (!state) {
-    history.push("/");
+    return <Redirect to="/" />;
   }
 
   const noRepositoryFound = state.options.length === 0;
@@ -58,8 +59,10 @@ const ListRepositories: React.FC<RepositoryModel> = (props) => {
             {state.options?.map((tuple: OptionsModel) => {
               return (
                 <Repository
+                  {...tuple}
                   name={tuple.name}
                   key={tuple.html_url}
+                  owner={tuple.owner.login}
                   language={tuple.language}
                   description={tuple.description}
                   starsCount={tuple.stargazers_count}
