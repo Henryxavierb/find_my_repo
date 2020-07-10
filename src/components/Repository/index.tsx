@@ -15,7 +15,7 @@ interface Repository {
 }
 
 const Repository: React.FC<Repository> = (props) => {
-  const { name, owner, language, description, starsCount } = props;
+  const { name, language, description, starsCount } = props;
 
   const history = useHistory();
   const languageColor: { [index: string]: any } = colors;

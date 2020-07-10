@@ -44,8 +44,6 @@ const Repository: React.FC<PropsModel> = (props) => {
     fetchUserDetail();
   }, [state.owner]);
 
-  console.log("state: ", userData);
-
   return (
     <div className="repositoryRoot">
       <Header />
