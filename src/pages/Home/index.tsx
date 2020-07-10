@@ -2,8 +2,8 @@ import React from "react";
 
 import "./index.css";
 import api from "../../service";
+import Header from "../../components/Header";
 import { useHistory } from "react-router-dom";
-import Header from "../../components/HeaderBar";
 import GithubImage from "../../assets/Octocat.png";
 import { CircularProgress } from "@material-ui/core";
 
