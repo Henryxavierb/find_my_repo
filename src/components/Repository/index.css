@@ -52,11 +52,13 @@
 .foot {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  position: relative;
 }
 
 .stars {
+  right: 0;
   display: flex;
+  position: absolute;
   align-items: center;
 }
 
