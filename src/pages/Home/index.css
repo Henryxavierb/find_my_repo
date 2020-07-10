@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap");
+
+.root {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.searchContainer {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.searchContainer h1 {
+  font-size: 20px;
+  font-weight: 400;
+  color: #586069 !important;
+  font-family: "Inter", sans-serif;
+}
+
+.formContainer {
+  width: 100%;
+  display: flex;
+  margin-top: 24px;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.inputContainer {
+  width: 600px;
+  max-width: 600px;
+  min-width: 600px;
+}
+
+.searchBar {
+  width: 100%;
+  height: 50px;
+  padding: 0 16px;
+  color: #424242;
+  max-width: 600px;
+  border-radius: 8px;
+  border: 1px solid #757575;
+  font-family: "Inter", sans-serif;
+}
+
+.searchBar:focus {
+  border-color: #1e88e5;
+  box-shadow: inset 0 0 0, 0 0 0.3em #1e88e5;
+}
+
+.searchButton {
+  width: 100px;
+  height: 50px;
+  cursor: pointer;
+  margin-left: 8px;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 8px;
+  background-color: #24292e;
+  border: 1px solid #24292e;
+}
+
+.searchButton:disabled:hover {
+  cursor: not-allowed;
+  background-color: #24292e;
+  border: 1px solid #24292e;
+}
+
+.searchButton:hover {
+  opacity: 0.7;
+  background-color: #1e88e5;
+  border: 1px solid #1e88e5;
+}
+
+@media (max-width: 800px) {
+  .formContainer {
+    flex-direction: column;
+  }
+
+  .inputContainer {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+  }
+
+  .searchBar {
+    width: 100%;
+    max-width: none;
+  }
+
+  .searchButton {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 16px;
+  }
+
+  .searchContainer h1 {
+    font-size: 16px;
+  }
+}

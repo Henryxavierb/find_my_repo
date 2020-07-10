@@ -2,12 +2,17 @@ import React from "react";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 
 import Home from "./pages/Home";
+import ListRepositories from "./pages/ListRepositories";
 
 const Routes: React.FC = () => {
   const routes = [
     {
       path: "/",
       component: Home,
+    },
+    {
+      path: "/repositories",
+      component: ListRepositories,
     },
   ];
 
