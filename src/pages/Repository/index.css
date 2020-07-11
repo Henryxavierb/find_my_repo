@@ -129,7 +129,7 @@
   text-decoration: underline;
 }
 
-.navigation a ~ a {
+.navigation :nth-of-type(3) {
   font-weight: bold;
 }
 

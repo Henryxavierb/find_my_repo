@@ -18,6 +18,8 @@ const PrefaceRepository: React.FC<PrefaceModel> = (props) => {
   return (
     <div className="prefaceRoot">
       <div className="navigation">
+        <a href="/">Search</a>
+        <div> / </div>
         <a href={UserUrl}>{owner}</a>
         <div> / </div>
         <a href={url}>{projectName}</a>
