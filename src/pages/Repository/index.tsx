@@ -108,16 +108,20 @@ const Repository: React.FC<PropsModel> = (props) => {
             <div className="contributors">
               <h1>Contributors</h1>
 
-              <ul>
-                {contributors.map((contributor: Contributors) => {
-                  return (
-                    <li key={contributor.login} className="contributorItem">
-                      <a href={contributor.html_url}>{contributor.login}</a>
-                      <div>{contributor.contributions}</div>
-                    </li>
-                  );
-                })}
-              </ul>
+              {contributors ? (
+                <ul>
+                  {contributors.map((contributor: Contributors) => {
+                    return (
+                      <li key={contributor.login} className="contributorItem">
+                        <a href={contributor.html_url}>{contributor.login}</a>
+                        <div>{contributor.contributions}</div>
+                      </li>
+                    );
+                  })}
+                </ul>
+              ) : (
+                <span className="noContributors">No contributors</span>
+              )}
             </div>
           </div>
         </div>

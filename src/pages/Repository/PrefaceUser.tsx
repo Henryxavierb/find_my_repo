@@ -31,7 +31,7 @@ const Repository: React.FC<PrefaceModel> = (props) => {
   } = props;
 
   function ellipses(word: string) {
-    const numberLimitCharacters = 28;
+    const numberLimitCharacters = 25;
 
     return word.length > numberLimitCharacters
       ? `${word.slice(0, numberLimitCharacters)}...`

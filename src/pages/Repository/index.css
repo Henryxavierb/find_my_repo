@@ -37,6 +37,7 @@
   font-size: 16px;
   max-width: 250px;
   color: #24292e;
+  font-family: "Inter", sans-serif;
 }
 
 .moreDetailsAboutUser {
@@ -157,11 +158,16 @@
   margin-left: 15px;
 }
 
+.noContributors {
+  color: #24292e;
+  font-family: "roboto" !important;
+}
+
 .contributors h1 {
   font-size: 24px;
   color: #24292e;
   font-weight: 500;
-  margin-top: 15px;
+  margin: 15px 0 20px;
   font-family: "roboto" !important;
 }
 
@@ -222,7 +228,7 @@
 
   .userBio {
     width: 100%;
-    max-width: none;
+    max-width: 720px;
   }
 
   .moreDetailsAboutUser {
