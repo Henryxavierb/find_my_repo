@@ -6,7 +6,6 @@ import { useHistory } from "react-router-dom";
 import starImage from "../../assets/star.svg";
 
 interface Repository {
-  // name?: string (optional)
   name: string;
   owner: string;
   language?: string;
@@ -24,6 +23,10 @@ const Repository: React.FC<Repository> = (props) => {
     history.push("/repository", props);
   }
 
+  function ellipse(word: string) {
+    return word.length > 120 ? `${word.slice(0, 120)}...` : word;
+  }
+
   return (
     <div className="repoContainer">
       <div className="about">
@@ -32,7 +35,9 @@ const Repository: React.FC<Repository> = (props) => {
         </div>
 
         <div className="description">
-          {description || "No description, website, or topics provided."}
+          {description
+            ? ellipse(description)
+            : "No description, website, or topics provided."}
         </div>
 
         <div className="foot">
