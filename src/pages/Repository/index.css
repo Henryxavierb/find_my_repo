@@ -247,6 +247,10 @@
     flex-direction: column;
   }
 
+  .navigation {
+    font-size: 14px;
+  }
+
   .dounut {
     width: 100%;
     margin: 20px 0;
@@ -258,6 +262,10 @@
 
   .contributors {
     width: 100%;
+  }
+
+  .stars {
+    visibility: hidden;
   }
 
   .contributorItem {
